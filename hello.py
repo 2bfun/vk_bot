@@ -9,7 +9,6 @@ app = Flask(__name__)
 # add filemode="w" to overwrite
 logging.basicConfig(filename="requests.log", level=logging.INFO)
 
-@app.route('/', methods=['GET','POST'])
-def hello_world():
-    logging.info(request)
+@app.route('/confirm', methods=['POST'])
+def confirmation():
     return config.CHECK_RESPONSE
